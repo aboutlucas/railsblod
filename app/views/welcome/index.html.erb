@@ -1,0 +1,28 @@
+	<main class="wrapper wrapper_padding clearfix">
+		<section class="col-1 about homepage_content">
+			<h2>Sobre</h2>
+			<hr/>
+			<p>Olá eu sou Lucas, essa página é com base em um <a href="#">tutorial em rails</a> :D, pelo fato de estar começando é massa ver esse tipo de aplicação free :3</p>
+			<p>Em <a href="#">HOC</a> 10% do lucro é destinado para projetos voltados a cidade :D</p>
+			<p>Caso tenha interesse em fazer parte é só entrar em contato ou clicar <a href="#">aqui</a> Abraços</p>
+		</section>
+		<section class="col-2 homepage_content">
+			<h2>Coisas legais</h2>
+			<hr/>
+			
+			<% @posts.each do |post| %>
+				<h3><a href="#"><%= link_to post.title, post %></a></h3>
+				<p class="data"><%= post.created_at.strftime("%A, %b %d") %></p>
+			<% end %>
+		</section>
+		<section class="col-3 homepage_content">
+			<h2>Sobre a Páscoa</h2>
+			<hr/>
+			<h3><a href="#">RedBull + Chocolate</a></h3>
+			<p class="data">Domingo Março 27</p>
+			<h3><a href="#">Café + Chocolate</a></h3>
+			<p class="data">Domingo Março 27</p>
+			<h3><a href="#">Páscoa + Café + Redbull</a></h3>
+			<p class="data">Domingo Março 27</p>
+		</section>
+	</main>
